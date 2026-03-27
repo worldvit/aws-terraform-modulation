@@ -6,7 +6,6 @@
 *.tfstate.old
 
 # 자격증명 및 민감 변수 파일
-terraform.tfvars
 *.tfvars.local
 
 # Terraform 작업 디렉터리
