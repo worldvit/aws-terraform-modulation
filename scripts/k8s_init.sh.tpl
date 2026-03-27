@@ -1,7 +1,4 @@
 #!/bin/bash
-# [REFACTOR #13] Kubernetes 노드 초기화 UserData 템플릿
-# templatefile() 변수: node_name, node_role
-
 set -euo pipefail
 NODE_NAME="${node_name}"
 NODE_ROLE="${node_role}"

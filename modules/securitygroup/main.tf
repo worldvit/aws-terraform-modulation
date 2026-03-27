@@ -1,5 +1,3 @@
-# [REFACTOR #12] admin_cidr_blocks 변수화 → 0.0.0.0/0 전체 허용 제거
-
 resource "aws_security_group" "ssh" {
   name        = "allow-ssh"
   description = "SSH access from admin CIDR only"

@@ -1,7 +1,3 @@
-# [REFACTOR #1]  자격증명 변수 호출 제거 (provider.tf Profile 방식으로 이관)
-# [REFACTOR #2]  depends_on 명시 유지 (암묵적 의존성 + 명시적 안전장치)
-# [REFACTOR #12] admin_cidr_blocks 전달
-
 module "network" {
   source             = "./modules/network"
   availability_zones = var.availability_zones

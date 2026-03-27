@@ -1,7 +1,3 @@
-# [REFACTOR #6]  미참조 data 블록 제거 (amazon-linux, ubuntu-1804)
-# [REFACTOR #4c] resource 이름 충돌 해소 → for_each 단일 블록으로 통일
-# [REFACTOR #13] user_data — templatefile()로 k8s_init.sh.tpl 연결
-
 # Ubuntu 24.04 LTS — 최신 AMI 동적 조회
 data "aws_ami" "ubuntu_2404" {
   most_recent = true
@@ -39,8 +35,6 @@ resource "aws_key_pair" "mykey" {
   public_key = file(var.path_to_public_key)
 }
 
-# [REFACTOR #4c] for_each 단일 블록 — count 버전 제거
-# [REFACTOR #13] user_data: templatefile()로 노드별 초기화 스크립트 주입
 resource "aws_instance" "kubernetes" {
   for_each = toset(var.ec2_names)
 

@@ -1,6 +1,3 @@
-# [REFACTOR #3] deprecated 'vpc = true' 주석 완전 제거
-# [REFACTOR #7] aws_route_table_association 추가 (프라이빗 서브넷 연결)
-
 module "vpc" {
   source  = "terraform-aws-modules/vpc/aws"
   version = "~> 5.0"

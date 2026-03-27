@@ -1,4 +1,4 @@
-# [REFACTOR #10] S3 + DynamoDB 원격 상태 관리
+# S3 + DynamoDB 원격 상태 관리
 # 사전 준비:
 #   aws s3 mb s3://my-tfstate-bucket --region us-west-2
 #   aws dynamodb create-table \

@@ -40,7 +40,7 @@ else
       --profile "$PROFILE" \
       --create-bucket-configuration LocationConstraint="$REGION"
   fi
-  echo "  ✅ 버킷 생성 완료: s3://$BUCKET"
+  echo " 버킷 생성 완료: s3://$BUCKET"
 fi
 
 # ── 2. S3 버킷 버전 관리 활성화 ────────────────────────────────────
@@ -51,7 +51,7 @@ aws s3api put-bucket-versioning \
   --region "$REGION" \
   --profile "$PROFILE" \
   --versioning-configuration Status=Enabled
-echo "  ✅ 버전 관리 활성화 완료"
+echo " 버전 관리 활성화 완료"
 
 # ── 3. S3 버킷 암호화 설정 ─────────────────────────────────────────
 echo ""
@@ -67,7 +67,7 @@ aws s3api put-bucket-encryption \
       }
     }]
   }'
-echo "  ✅ 암호화 설정 완료"
+echo " 암호화 설정 완료"
 
 # ── 4. DynamoDB 테이블 생성 ────────────────────────────────────────
 echo ""
@@ -77,7 +77,7 @@ if aws dynamodb describe-table \
       --table-name "$TABLE" \
       --region "$REGION" \
       --profile "$PROFILE" 2>/dev/null | grep -q "TableStatus"; then
-  echo "  ✅ 테이블이 이미 존재합니다: $TABLE"
+  echo " 테이블이 이미 존재합니다: $TABLE"
 else
   aws dynamodb create-table \
     --table-name "$TABLE" \
@@ -87,12 +87,12 @@ else
     --region "$REGION" \
     --profile "$PROFILE"
 
-  echo "  ⏳ 테이블 활성화 대기 중..."
+  echo " 테이블 활성화 대기 중..."
   aws dynamodb wait table-exists \
     --table-name "$TABLE" \
     --region "$REGION" \
     --profile "$PROFILE"
-  echo "  ✅ DynamoDB 테이블 생성 완료: $TABLE"
+  echo " DynamoDB 테이블 생성 완료: $TABLE"
 fi
 
 echo ""

@@ -1,5 +1,3 @@
-# [REFACTOR #14] 루트 output 완성 — Ansible 등 downstream 파이프라인 연동
-
 output "vpc_id" {
   description = "생성된 VPC ID"
   value       = module.network.vpc_id

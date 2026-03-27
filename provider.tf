@@ -14,6 +14,5 @@ terraform {
 }
 
 provider "aws" {
-  # profile = var.aws_profile   # ~/.aws/credentials 의 [profile] 섹션
   region  = var.aws_region
 }

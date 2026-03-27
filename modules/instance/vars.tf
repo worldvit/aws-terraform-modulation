@@ -1,5 +1,3 @@
-# [REFACTOR #8] 미사용 변수 정리 후 인스턴스 모듈 전용 변수만 유지
-
 variable "instance_type" {
   description = "EC2 인스턴스 타입"
   type        = string
