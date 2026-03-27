@@ -1,8 +1,3 @@
-# [REFACTOR #1]  AWS_ACCESS_KEY / AWS_SECRET_KEY 제거 → Profile 방식
-# [REFACTOR #8]  미사용 변수(AMIS, PATH_TO_PRIVATE_KEY, INSTANCE_USERNAME) 제거
-# [REFACTOR #12] admin_cidr_blocks 추가 → 보안 그룹 CIDR 변수화
-# [REFACTOR #11] aws_profile / aws_region 으로 환경별 분리 지원
-
 variable "aws_profile" {
   description = "AWS CLI Profile (~/.aws/credentials)"
   type        = string
