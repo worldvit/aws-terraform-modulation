@@ -1,0 +1,27 @@
+# [REFACTOR #4/#5] 민감 파일 및 불필요 파일 Git 제외
+
+# Terraform 상태 파일
+*.tfstate
+*.tfstate.backup
+*.tfstate.old
+
+# 자격증명 및 민감 변수 파일
+terraform.tfvars
+*.tfvars.local
+
+# Terraform 작업 디렉터리
+.terraform/
+.terraform.lock.hcl
+
+# SSH 키 (절대 커밋 금지)
+keys/
+*.pem
+*.pub
+
+# 백업 및 구버전 파일
+*.old
+*.old-*
+*.tf.old
+
+# 스크립트 출력
+private_ips.txt

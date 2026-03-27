@@ -1,0 +1,9 @@
+# [REFACTOR #11] 운영 환경 변수 파일
+# 사용 방법: terraform apply -var-file="terraform.tfvars.prod"
+
+aws_profile        = "prod"
+aws_region         = "us-west-2"
+availability_zones = ["us-west-2a", "us-west-2b", "us-west-2c"]
+cidr_block         = "10.20.0.0/16"
+instance_type      = "t3.small"
+admin_cidr_blocks  = ["118.131.22.84/32"]

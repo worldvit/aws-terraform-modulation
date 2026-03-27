@@ -1,0 +1,9 @@
+# [REFACTOR #11] 개발 환경 변수 파일
+# 사용 방법: terraform apply -var-file="terraform.tfvars.dev"
+
+aws_profile        = "dev"
+aws_region         = "us-west-2"
+availability_zones = ["us-west-2a", "us-west-2b"]
+cidr_block         = "10.10.0.0/16"
+instance_type      = "t2.micro"
+admin_cidr_blocks  = ["10.0.0.0/8"]
